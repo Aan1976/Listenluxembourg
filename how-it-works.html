@@ -7,28 +7,168 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
-    .serif { font-family: 'Playfair Display', serif; }
+    
+    .serif { 
+      font-family: 'Playfair Display', serif; 
+    }
+    
+    body {
+      background-color: #0A3D2A;
+      color: white;
+    }
   </style>
 </head>
-<body class="bg-[#0A3D2A] text-white">
+<body class="min-h-screen">
 
-  <!-- Navigation -->
-
-  <section class="pt-32 pb-20">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h1 class="text-5xl serif">How ParlerLUX Works</h1>
-      <p class="mt-6 text-xl text-white/70">Four simple steps to meaningful conversation.</p>
-    </div>
-
-    <div class="max-w-5xl mx-auto px-6 mt-20 grid md:grid-cols-4 gap-10">
-      <div class="text-center">
-        <div class="w-16 h-16 mx-auto rounded-2xl bg-white/10 flex items-center justify-center text-3xl">1</div>
-        <h3 class="mt-6 text-xl serif">Tell Us What You Seek</h3>
-        <p class="text-white/70 mt-3">Share your preferences. No pressure.</p>
+  <!-- NAVIGATION -->
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#0A3D2A]/95 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-[#C9A66B] flex items-center justify-center text-[#0A3D2A] font-serif text-2xl font-bold">
+          L
+        </div>
+        <span class="font-serif text-2xl tracking-tight">ParlerLUX</span>
       </div>
-      <!-- Tambahkan step 2,3,4 dengan cara yang sama -->
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="index.html" class="hover:text-[#C9A66B] transition-colors">Home</a>
+        <a href="companions.html" class="hover:text-[#C9A66B] transition-colors">Companions</a>
+        <a href="how-it-works.html" class="text-[#C9A66B]">How it Works</a>
+        <a href="become-companion.html" class="hover:text-[#C9A66B] transition-colors">For Companions</a>
+        <a href="pricing.html" class="hover:text-[#C9A66B] transition-colors">Pricing</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="companions.html" 
+           class="bg-[#C9A66B] hover:bg-white text-[#0A3D2A] px-6 py-3 rounded-full text-sm font-medium transition-all">
+          Browse Companions
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pt-28 pb-20 text-center">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="inline-flex items-center gap-2 text-[#C9A66B] text-sm tracking-widest mb-6">
+        SIMPLE & ELEGANT
+      </div>
+      <h1 class="text-5xl md:text-6xl serif leading-tight">
+        How ParlerLUX Works
+      </h1>
+      <p class="mt-6 text-xl text-white/70">
+        Four quiet steps to meaningful conversation
+      </p>
     </div>
   </section>
+
+  <!-- STEPS -->
+  <section class="max-w-5xl mx-auto px-6 pb-24">
+    <div class="grid md:grid-cols-2 gap-12">
+
+      <!-- Step 1 -->
+      <div class="flex gap-8">
+        <div class="shrink-0 w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-2xl font-serif">01</div>
+        <div>
+          <h3 class="text-2xl serif">Tell us what you're looking for</h3>
+          <p class="mt-4 text-white/70 leading-relaxed">
+            Answer a few gentle questions about your preferences, topics you’d like to discuss, 
+            and what kind of conversation you need. Skip anything you want.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="flex gap-8">
+        <div class="shrink-0 w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-2xl font-serif">02</div>
+        <div>
+          <h3 class="text-2xl serif">Choose your companion</h3>
+          <p class="mt-4 text-white/70 leading-relaxed">
+            Browse thoughtfully selected profiles. See their background, languages, 
+            and availability. Take your time — no pressure.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="flex gap-8">
+        <div class="shrink-0 w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-2xl font-serif">03</div>
+        <div>
+          <h3 class="text-2xl serif">Have the conversation</h3>
+          <p class="mt-4 text-white/70 leading-relaxed">
+            Connect via secure video call, voice call, or meet in person (coffee in Kirchberg, 
+            walk in Petrusse, etc). All conversations are strictly platonic.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="flex gap-8">
+        <div class="shrink-0 w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-2xl font-serif">04</div>
+        <div>
+          <h3 class="text-2xl serif">Reflect & Rebook</h3>
+          <p class="mt-4 text-white/70 leading-relaxed">
+            After the session, leave optional private feedback. Rebook the same companion easily 
+            whenever you want.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="bg-white/5 py-12">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-white/70">
+        All conversations are <span class="text-[#C9A66B]">100% confidential</span> • 
+        Companions are carefully screened • 
+        Strictly platonic environment
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black/40 border-t border-white/10 py-16 mt-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-8 h-8 rounded-full bg-[#C9A66B] flex items-center justify-center text-[#0A3D2A] font-serif text-2xl font-bold">L</div>
+            <span class="font-serif text-2xl tracking-tight">ParlerLUX</span>
+          </div>
+          <p class="text-white/60 text-sm">
+            Premium platonic companionship in Luxembourg.
+          </p>
+        </div>
+        <div>
+          <h4 class="uppercase text-xs tracking-widest text-white/50 mb-4">Platform</h4>
+          <div class="space-y-2 text-sm">
+            <a href="index.html" class="block hover:text-[#C9A66B]">Home</a>
+            <a href="companions.html" class="block hover:text-[#C9A66B]">Companions</a>
+            <a href="pricing.html" class="block hover:text-[#C9A66B]">Pricing</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="uppercase text-xs tracking-widest text-white/50 mb-4">Company</h4>
+          <div class="space-y-2 text-sm">
+            <a href="how-it-works.html" class="block hover:text-[#C9A66B]">How it Works</a>
+            <a href="become-companion.html" class="block hover:text-[#C9A66B]">Become a Companion</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="uppercase text-xs tracking-widest text-white/50 mb-4">Legal</h4>
+          <div class="space-y-2 text-sm">
+            <a href="#" class="block hover:text-[#C9A66B]">Privacy Policy</a>
+            <a href="#" class="block hover:text-[#C9A66B]">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center text-xs text-white/50 mt-16">
+        © 2026 ParlerLUX Luxembourg. All conversations are strictly platonic and confidential.
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
