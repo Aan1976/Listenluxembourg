@@ -7,8 +7,22 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+    
     .serif { font-family: 'Playfair Display', serif; }
     body { background-color: #0A3D2A; color: white; }
+
+    /* Perbaikan Dropdown */
+    select {
+      background-color: #1A3D2A !important;
+      color: white !important;
+      border: 1px solid #C9A66B40 !important;
+    }
+    
+    select option {
+      background-color: #0A3D2A;
+      color: white;
+      padding: 12px;
+    }
   </style>
 </head>
 <body class="min-h-screen">
@@ -50,10 +64,9 @@
       <p class="text-lg mb-6">"I'm looking for someone who…"</p>
       
       <div class="grid md:grid-cols-3 gap-8">
-        <!-- Language -->
         <div>
-          <label class="block text-sm text-white/60 mb-3">Language</label>
-          <select id="languageFilter" class="w-full bg-white/10 border border-white/20 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#C9A66B]">
+          <label class="block text-sm text-white/70 mb-3">Language</label>
+          <select id="languageFilter" class="w-full rounded-2xl px-6 py-4 focus:outline-none focus:border-[#C9A66B]">
             <option value="all">Any</option>
             <option value="EN">English (EN)</option>
             <option value="FR">French (FR)</option>
@@ -63,24 +76,22 @@
           </select>
         </div>
 
-        <!-- Interest -->
         <div>
-          <label class="block text-sm text-white/60 mb-3">Interest</label>
-          <select id="interestFilter" class="w-full bg-white/10 border border-white/20 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#C9A66B]">
+          <label class="block text-sm text-white/70 mb-3">Interest</label>
+          <select id="interestFilter" class="w-full rounded-2xl px-6 py-4 focus:outline-none focus:border-[#C9A66B]">
             <option value="all">Any</option>
             <option value="Finance">Finance</option>
             <option value="Expat">Expat Life</option>
             <option value="Career">Career</option>
             <option value="Culture">Culture</option>
             <option value="Growth">Personal Growth</option>
-            <option value="Anxiety">Anxiety &amp; Well-being</option>
+            <option value="Anxiety">Anxiety & Well-being</option>
           </select>
         </div>
 
-        <!-- Gender -->
         <div>
-          <label class="block text-sm text-white/60 mb-3">Gender</label>
-          <select id="genderFilter" class="w-full bg-white/10 border border-white/20 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#C9A66B]">
+          <label class="block text-sm text-white/70 mb-3">Gender</label>
+          <select id="genderFilter" class="w-full rounded-2xl px-6 py-4 focus:outline-none focus:border-[#C9A66B]">
             <option value="all">Any</option>
             <option value="Female">Female</option>
             <option value="Male">Male</option>
@@ -94,7 +105,7 @@
   <!-- COMPANIONS GRID -->
   <section class="max-w-7xl mx-auto px-6 pb-24">
     <div id="companionsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Companions akan di-generate oleh JavaScript -->
+      <!-- Isi otomatis oleh JavaScript -->
     </div>
   </section>
 
@@ -136,12 +147,13 @@
   </footer>
 
   <script>
+    // Data Companions
     const companions = [
       { name: "Élise Laurent", age: 44, languages: "FR · EN · LU", interest: "Finance", gender: "Female", available: true },
       { name: "Henri Muller", age: 58, languages: "EN · FR · DE", interest: "Culture", gender: "Male", available: false },
       { name: "Mariana Silva", age: 33, languages: "EN · PT · FR", interest: "Expat", gender: "Female", available: true },
       { name: "Thomas Weber", age: 47, languages: "DE · EN · LU", interest: "Career", gender: "Male", available: true },
-      { name: "Elena Petrova", age: 39, languages: "EN · FR · RU", interest: "Personal Growth", gender: "Female", available: false },
+      { name: "Elena Petrova", age: 39, languages: "EN · FR · RU", interest: "Growth", gender: "Female", available: false },
       { name: "Jean-Claude Becker", age: 51, languages: "FR · DE · LU", interest: "Culture", gender: "Male", available: true }
     ];
 
@@ -165,7 +177,7 @@
               ${c.available ? `<span class="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full">Available Now</span>` : ''}
             </div>
             <p class="mt-4 text-white/70">${c.interest} • Thoughtful listener</p>
-            <button onclick="alert('In real version this would start booking with ${c.name}')" 
+            <button onclick="alert('Booking with ${c.name} (demo)')" 
                     class="mt-8 w-full bg-white/10 hover:bg-white hover:text-[#0A3D2A] py-4 rounded-2xl transition-all">
               Start Conversation
             </button>
@@ -175,7 +187,6 @@
       });
     }
 
-    // Filter functionality
     function filterCompanions() {
       const lang = document.getElementById('languageFilter').value;
       const interest = document.getElementById('interestFilter').value;
@@ -183,8 +194,7 @@
 
       const filtered = companions.filter(c => {
         const matchLang = lang === 'all' || c.languages.includes(lang);
-        const matchInterest = interest === 'all' || c.interest === interest || 
-                             (interest === 'Expat' && c.interest === 'Expat Life');
+        const matchInterest = interest === 'all' || c.interest === interest;
         const matchGender = gender === 'all' || c.gender === gender;
         return matchLang && matchInterest && matchGender;
       });
@@ -192,7 +202,7 @@
       renderCompanions(filtered);
     }
 
-    // Event listeners
+    // Event Listeners
     document.getElementById('languageFilter').addEventListener('change', filterCompanions);
     document.getElementById('interestFilter').addEventListener('change', filterCompanions);
     document.getElementById('genderFilter').addEventListener('change', filterCompanions);
