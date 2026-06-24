@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Companions - ParlerLUX</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+    
+    .serif { 
+      font-family: 'Playfair Display', serif; 
+    }
+    
+    body {
+      background-color: #0A3D2A;
+      color: white;
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- NAVIGATION -->
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#0A3D2A]/95 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-[#C9A66B] flex items-center justify-center text-[#0A3D2A] font-serif text-2xl font-bold">
+          L
+        </div>
+        <span class="font-serif text-2xl tracking-tight">ParlerLUX</span>
+      </div>
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="index.html" class="hover:text-[#C9A66B]">Home</a>
+        <a href="companions.html" class="text-[#C9A66B]">Companions</a>
+        <a href="how-it-works.html" class="hover:text-[#C9A66B]">How it Works</a>
+        <a href="become-companion.html" class="hover:text-[#C9A66B]">For Companions</a>
+        <a href="pricing.html" class="hover:text-[#C9A66B]">Pricing</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="pricing.html" 
+           class="bg-[#C9A66B] hover:bg-white text-[#0A3D2A] px-6 py-3 rounded-full text-sm font-medium transition-all">
+          Browse Companions
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pt-28 pb-16">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h1 class="text-5xl md:text-6xl serif">Meet Our Companions</h1>
+      <p class="mt-6 text-white/70 text-lg">Carefully chosen individuals who excel at listening and meaningful conversation.</p>
+    </div>
+  </section>
+
+  <!-- COMPANIONS GRID -->
+  <section class="max-w-7xl mx-auto px-6 pb-24">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Card 1 -->
+      <div class="bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-[#C9A66B]/40 transition-all group">
+        <div class="h-80 bg-gradient-to-br from-amber-300/20 to-white/5 flex items-center justify-center text-7xl">
+          👩‍💼
+        </div>
+        <div class="p-8">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-2xl serif">Marie Laurent</h3>
+              <p class="text-[#C9A66B]">42 • Luxembourg</p>
+            </div>
+            <span class="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full">Available Now</span>
+          </div>
+          <p class="mt-4 text-white/70">Former diplomat. Fluent in French, English, German. Loves discussing philosophy, career transitions, and life in Luxembourg.</p>
+          <div class="mt-6 text-sm text-white/60">French • English • German</div>
+          <button class="mt-8 w-full bg-white/10 hover:bg-white hover:text-[#0A3D2A] py-4 rounded-2xl transition-all">
+            Start Conversation
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-[#C9A66B]/40 transition-all group">
+        <div class="h-80 bg-gradient-to-br from-blue-300/20 to-white/5 flex items-center justify-center text-7xl">
+          👨🏻‍💼
+        </div>
+        <div class="p-8">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-2xl serif">Thomas Weber</h3>
+              <p class="text-[#C9A66B]">38 • German</p>
+            </div>
+          </div>
+          <p class="mt-4 text-white/70">Finance professional turned listener. Excellent at career advice, work-life balance, and deep discussions about purpose.</p>
+          <div class="mt-6 text-sm text-white/60">German • English • Luxembourgish</div>
+          <button class="mt-8 w-full bg-white/10 hover:bg-white hover:text-[#0A3D2A] py-4 rounded-2xl transition-all">
+            Start Conversation
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-[#C9A66B]/40 transition-all group">
+        <div class="h-80 bg-gradient-to-br from-rose-300/20 to-white/5 flex items-center justify-center text-7xl">
+          👩🏻
+        </div>
+        <div class="p-8
