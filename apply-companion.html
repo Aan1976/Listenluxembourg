@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply to Become a Companion - ParlerLUX</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+    
+    .serif { 
+      font-family: 'Playfair Display', serif; 
+    }
+    
+    body {
+      background-color: #0A3D2A;
+      color: white;
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- NAVIGATION -->
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#0A3D2A]/95 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-[#C9A66B] flex items-center justify-center text-[#0A3D2A] font-serif text-2xl font-bold">
+          L
+        </div>
+        <span class="font-serif text-2xl tracking-tight">ParlerLUX</span>
+      </div>
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="index.html" class="hover:text-[#C9A66B]">Home</a>
+        <a href="companions.html" class="hover:text-[#C9A66B]">Companions</a>
+        <a href="how-it-works.html" class="hover:text-[#C9A66B]">How it Works</a>
+        <a href="become-companion.html" class="text-[#C9A66B]">For Companions</a>
+        <a href="pricing.html" class="hover:text-[#C9A66B]">Pricing</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pt-28 pb-16 text-center">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="inline-flex items-center gap-2 text-[#C9A66B] text-sm tracking-widest mb-6">
+        APPLICATION
+      </div>
+      <h1 class="text-5xl md:text-6xl serif leading-tight">
+        Apply to Become<br>a Companion
+      </h1>
+      <p class="mt-6 text-xl text-white/70">
+        Join a small and selective community of thoughtful listeners in Luxembourg.
+      </p>
+    </div>
+  </section>
+
+  <!-- APPLICATION FORM -->
+  <section class="max-w-2xl mx-auto px-6 pb-24">
+    <div class="bg-white/5 border border-white/10 rounded-3xl p-10 md:p-14">
+      <form id="companionForm" class="space-y-8">
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm text-white/70 mb-2">Full Name *</label>
+            <input type="text" required class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#C9A66B]">
+          </div>
+          <div>
+            <label class="block text-sm text-white/70 mb-2">Age *</label>
+            <input type="number" min="25" required class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#C9A66B]">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm text-white/70 mb-2">Nationality / Residency *</label>
+          <input type="text" placeholder="e.g. Luxembourg, France, Portugal" required class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#C9A66B]">
+        </div>
+
+        <div>
+          <label class="block text-sm text-white/70 mb-2">Languages Spoken (select all that apply) *</label>
+          <div class="grid grid-cols-2 gap-3">
+            <label class="flex items-center gap-3"><input type="checkbox" class="accent-[#C9A66B]"> English</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="accent-[#C9A66B]"> French</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="accent-[#C9A66B]"> German</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="accent-[#C9A66B]"> Luxembourgish</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="accent-[#C9A66B]"> Portuguese</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="accent-[#C9A66B]"> Other</label>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm text-white/70 mb-2">Why do you want to become a Companion? *</label>
+          <textarea rows="5" required class="w-full bg-white/10 border border-white/20 rounded-3xl px-6 py-5 focus:outline-none focus:border-[#C9A66B]" placeholder="Tell us about yourself and your motivation..."></textarea>
+        </div>
+
+        <div>
+          <label class="block text-sm text-white/70 mb-2">What topics are you most comfortable discussing?</label>
+          <textarea rows="4" class="w-full bg-white/10 border border-white/20 rounded-3xl px-6 py-5 focus:outline-none focus:border-[#C9A66B]" placeholder="Career, expat life, philosophy, culture, personal growth, etc."></textarea>
+        </div>
+
+        <div>
+          <label class="block text-sm text-white/70 mb-2">Email Address *</label>
+          <input type="email" required class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#C9A66B]">
+        </div>
+
+        <div>
+          <label class="block text-sm text-white/70 mb-2">Phone Number (optional)</label>
+          <input type="tel" class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#C9A66B]">
+        </div>
+
+        <div class="pt-6">
+          <button type="submit" 
+                  class="w-full bg-[#C9A66B] hover:bg-white text-[#0A3D2A] py-6 rounded-2xl text-lg font-medium transition-all">
+            Submit Application
+          </button>
+          <p class="text-center text-xs text-white/50 mt-6">
+            Only selected candidates will be contacted. Thank you for your interest.
+          </p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black/40 border-t border-white/10 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-8 h-8 rounded-full bg-[#C9A66B] flex items-center justify-center text-[#0A3D2A] font-serif text-2xl font-bold">L</div>
+            <span class="font-serif text-2xl tracking-tight">ParlerLUX</span>
+          </div>
+          <p class="text-white/60 text-sm">Premium platonic companionship in Luxembourg.</p>
+        </div>
+        <div>
+          <h4 class="uppercase text-xs tracking-widest text-white/50 mb-4">Platform</h4>
+          <div class="space-y-2 text-sm">
+            <a href="index.html" class="block hover:text-[#C9A66B]">Home</a>
+            <a href="companions.html" class="block hover:text-[#C9A66B]">Companions</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="uppercase text-xs tracking-widest text-white/50 mb-4">Company</h4>
+          <div class="space-y-2 text-sm">
+            <a href="become-companion.html" class="block hover:text-[#C9A66B]">Become a Companion</a>
+            <a href="apply-companion.html" class="block text-[#C9A66B]">Apply Now</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="uppercase text-xs tracking-widest text-white/50 mb-4">Legal</h4>
+          <div class="space-y-2 text-sm">
+            <a href="privacy-policy.html" class="block hover:text-[#C9A66B]">Privacy Policy</a>
+            <a href="terms-of-service.html" class="block hover:text-[#C9A66B]">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple form submission alert
+    document.getElementById('companionForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("✅ Thank you! Your application has been received.\n\nOur team will review it and contact you within 7-14 days.");
+    });
+  </script>
+
+</body>
+</html>
