@@ -208,6 +208,24 @@
       renderCompanions(filtered);
     }
 
+    function startConversation(btn, companionName) {
+      const originalContent = btn.innerHTML;
+
+      btn.disabled = true;
+
+      btn.innerHTML = `
+        <div class="w-4 h-4 border-2 border-[#0A3D2A]
+                    border-t-tranparent rounded-full animate-spin">
+        </div>
+        <span>Connecting...</span>
+      `;
+
+      setTimeout(() => {
+        window.location.href =
+          `apply-companion.html?name=${encodeURIComponent(companionName)}`;
+      }, 1200);
+    }
+    
     // Event Listeners
     document.getElementById('languageFilter').addEventListener('change', filterCompanions);
     document.getElementById('interestFilter').addEventListener('change', filterCompanions);
