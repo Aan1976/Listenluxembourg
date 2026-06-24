@@ -7,15 +7,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
-    
-    .serif { 
-      font-family: 'Playfair Display', serif; 
-    }
-    
-    body {
-      background-color: #0A3D2A;
-      color: white;
-    }
+    .serif { font-family: 'Playfair Display', serif; }
+    body { background-color: #0A3D2A; color: white; }
   </style>
 </head>
 <body class="min-h-screen">
@@ -24,159 +17,84 @@
   <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#0A3D2A]/95 backdrop-blur-md">
     <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-full bg-[#C9A66B] flex items-center justify-center text-[#0A3D2A] font-serif text-2xl font-bold">
-          L
-        </div>
+        <div class="w-8 h-8 rounded-full bg-[#C9A66B] flex items-center justify-center text-[#0A3D2A] font-serif text-2xl font-bold">L</div>
         <span class="font-serif text-2xl tracking-tight">ParlerLUX</span>
       </div>
 
       <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-        <a href="index.html" class="hover:text-[#C9A66B] transition-colors">Home</a>
+        <a href="index.html" class="hover:text-[#C9A66B]">Home</a>
         <a href="companions.html" class="text-[#C9A66B]">Companions</a>
-        <a href="how-it-works.html" class="hover:text-[#C9A66B] transition-colors">How it Works</a>
-        <a href="become-companion.html" class="hover:text-[#C9A66B] transition-colors">For Companions</a>
-        <a href="pricing.html" class="hover:text-[#C9A66B] transition-colors">Pricing</a>
+        <a href="how-it-works.html" class="hover:text-[#C9A66B]">How it Works</a>
+        <a href="become-companion.html" class="hover:text-[#C9A66B]">For Companions</a>
+        <a href="pricing.html" class="hover:text-[#C9A66B]">Pricing</a>
       </div>
 
-      <div class="flex items-center gap-4">
-        <a href="pricing.html" 
-           class="bg-[#C9A66B] hover:bg-white text-[#0A3D2A] px-6 py-3 rounded-full text-sm font-medium transition-all">
-          Browse Companions
-        </a>
-      </div>
+      <a href="pricing.html" class="bg-[#C9A66B] hover:bg-white text-[#0A3D2A] px-6 py-3 rounded-full text-sm font-medium">Browse Companions</a>
     </div>
   </nav>
 
   <!-- HERO -->
-  <section class="pt-28 pb-16 text-center">
-    <div class="max-w-4xl mx-auto px-6">
-      <h1 class="text-5xl md:text-6xl serif">Meet Our Companions</h1>
-      <p class="mt-6 text-xl text-white/70">
-        Carefully selected individuals who offer warmth, depth, and genuine listening.
+  <section class="pt-28 pb-12">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h1 class="text-5xl md:text-6xl serif">Companions</h1>
+      <p class="mt-6 text-xl text-white/70 max-w-2xl mx-auto">
+        Find someone who feels right.<br>
+        Every companion is interviewed, reference-checked and chosen for warmth as much as for character.
       </p>
     </div>
   </section>
 
-  <!-- COMPANIONS GRID - 5 Orang -->
+  <!-- FILTERS -->
+  <section class="max-w-7xl mx-auto px-6 pb-12">
+    <div class="bg-white/5 border border-white/10 rounded-3xl p-8">
+      <p class="text-lg mb-6">"I'm looking for someone who…"</p>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Language -->
+        <div>
+          <label class="block text-sm text-white/60 mb-3">Language</label>
+          <select id="languageFilter" class="w-full bg-white/10 border border-white/20 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#C9A66B]">
+            <option value="all">Any</option>
+            <option value="EN">English (EN)</option>
+            <option value="FR">French (FR)</option>
+            <option value="DE">German (DE)</option>
+            <option value="LU">Luxembourgish (LU)</option>
+            <option value="PT">Portuguese (PT)</option>
+          </select>
+        </div>
+
+        <!-- Interest -->
+        <div>
+          <label class="block text-sm text-white/60 mb-3">Interest</label>
+          <select id="interestFilter" class="w-full bg-white/10 border border-white/20 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#C9A66B]">
+            <option value="all">Any</option>
+            <option value="Finance">Finance</option>
+            <option value="Expat">Expat Life</option>
+            <option value="Career">Career</option>
+            <option value="Culture">Culture</option>
+            <option value="Growth">Personal Growth</option>
+            <option value="Anxiety">Anxiety &amp; Well-being</option>
+          </select>
+        </div>
+
+        <!-- Gender -->
+        <div>
+          <label class="block text-sm text-white/60 mb-3">Gender</label>
+          <select id="genderFilter" class="w-full bg-white/10 border border-white/20 rounded-2xl px-5 py-4 focus:outline-none focus:border-[#C9A66B]">
+            <option value="all">Any</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+            <option value="Non-binary">Non-binary</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPANIONS GRID -->
   <section class="max-w-7xl mx-auto px-6 pb-24">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      <!-- 1 -->
-      <div class="bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-[#C9A66B]/40 transition-all group">
-        <div class="h-80 bg-gradient-to-br from-amber-300/20 to-white/5 flex items-center justify-center text-7xl">
-          👩‍💼
-        </div>
-        <div class="p-8">
-          <div class="flex justify-between items-start">
-            <div>
-              <h3 class="text-2xl serif">Marie Laurent</h3>
-              <p class="text-[#C9A66B]">42 • Luxembourg</p>
-            </div>
-            <span class="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full">Available Now</span>
-          </div>
-          <p class="mt-4 text-white/70 text-sm leading-relaxed">
-            Former diplomat. Loves philosophy, culture, and meaningful life transitions.
-          </p>
-          <div class="mt-6 text-sm text-white/60">French • English • German</div>
-          <button onclick="alert('In real version this would open booking')" 
-                  class="mt-8 w-full bg-white/10 hover:bg-white hover:text-[#0A3D2A] py-4 rounded-2xl transition-all">
-            Start Conversation
-          </button>
-        </div>
-      </div>
-
-      <!-- 2 -->
-      <div class="bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-[#C9A66B]/40 transition-all group">
-        <div class="h-80 bg-gradient-to-br from-blue-300/20 to-white/5 flex items-center justify-center text-7xl">
-          👨🏻‍💼
-        </div>
-        <div class="p-8">
-          <div class="flex justify-between items-start">
-            <div>
-              <h3 class="text-2xl serif">Thomas Weber</h3>
-              <p class="text-[#C9A66B]">38 • Germany</p>
-            </div>
-          </div>
-          <p class="mt-4 text-white/70 text-sm leading-relaxed">
-            Finance professional with deep interest in work-life balance and purpose.
-          </p>
-          <div class="mt-6 text-sm text-white/60">German • English • Luxembourgish</div>
-          <button onclick="alert('In real version this would open booking')" 
-                  class="mt-8 w-full bg-white/10 hover:bg-white hover:text-[#0A3D2A] py-4 rounded-2xl transition-all">
-            Start Conversation
-          </button>
-        </div>
-      </div>
-
-      <!-- 3 -->
-      <div class="bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-[#C9A66B]/40 transition-all group">
-        <div class="h-80 bg-gradient-to-br from-rose-300/20 to-white/5 flex items-center justify-center text-7xl">
-          👩🏻
-        </div>
-        <div class="p-8">
-          <div class="flex justify-between items-start">
-            <div>
-              <h3 class="text-2xl serif">Ana Silva</h3>
-              <p class="text-[#C9A66B]">35 • Portugal</p>
-            </div>
-          </div>
-          <p class="mt-4 text-white/70 text-sm leading-relaxed">
-            Specialist in expat life and trailing spouses. Warm and culturally aware.
-          </p>
-          <div class="mt-6 text-sm text-white/60">Portuguese • English • French</div>
-          <button onclick="alert('In real version this would open booking')" 
-                  class="mt-8 w-full bg-white/10 hover:bg-white hover:text-[#0A3D2A] py-4 rounded-2xl transition-all">
-            Start Conversation
-          </button>
-        </div>
-      </div>
-
-      <!-- 4 -->
-      <div class="bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-[#C9A66B]/40 transition-all group">
-        <div class="h-80 bg-gradient-to-br from-emerald-300/20 to-white/5 flex items-center justify-center text-7xl">
-          👨🏼
-        </div>
-        <div class="p-8">
-          <div class="flex justify-between items-start">
-            <div>
-              <h3 class="text-2xl serif">Jean-Claude Muller</h3>
-              <p class="text-[#C9A66B]">47 • Luxembourg</p>
-            </div>
-          </div>
-          <p class="mt-4 text-white/70 text-sm leading-relaxed">
-            Local Luxembourger. Passionate about history, identity, and European culture.
-          </p>
-          <div class="mt-6 text-sm text-white/60">Luxembourgish • French • English</div>
-          <button onclick="alert('In real version this would open booking')" 
-                  class="mt-8 w-full bg-white/10 hover:bg-white hover:text-[#0A3D2A] py-4 rounded-2xl transition-all">
-            Start Conversation
-          </button>
-        </div>
-      </div>
-
-      <!-- 5 -->
-      <div class="bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-[#C9A66B]/40 transition-all group">
-        <div class="h-80 bg-gradient-to-br from-purple-300/20 to-white/5 flex items-center justify-center text-7xl">
-          👩🏽
-        </div>
-        <div class="p-8">
-          <div class="flex justify-between items-start">
-            <div>
-              <h3 class="text-2xl serif">Elena Petrova</h3>
-              <p class="text-[#C9A66B]">39 • Russia / UK</p>
-            </div>
-          </div>
-          <p class="mt-4 text-white/70 text-sm leading-relaxed">
-            Artist and psychologist background. Excellent at creative and emotional conversations.
-          </p>
-          <div class="mt-6 text-sm text-white/60">English • Russian • French</div>
-          <button onclick="alert('In real version this would open booking')" 
-                  class="mt-8 w-full bg-white/10 hover:bg-white hover:text-[#0A3D2A] py-4 rounded-2xl transition-all">
-            Start Conversation
-          </button>
-        </div>
-      </div>
-
+    <div id="companionsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Companions akan di-generate oleh JavaScript -->
     </div>
   </section>
 
@@ -209,16 +127,79 @@
         <div>
           <h4 class="uppercase text-xs tracking-widest text-white/50 mb-4">Legal</h4>
           <div class="space-y-2 text-sm">
-            <a href="#" class="block hover:text-[#C9A66B]">Privacy</a>
-            <a href="#" class="block hover:text-[#C9A66B]">Terms</a>
+            <a href="privacy-policy.html" class="block hover:text-[#C9A66B]">Privacy Policy</a>
+            <a href="terms-of-service.html" class="block hover:text-[#C9A66B]">Terms of Service</a>
           </div>
         </div>
       </div>
-      <div class="text-center text-xs text-white/50 mt-16">
-        © 2026 ParlerLUX Luxembourg. All conversations are strictly platonic and confidential.
-      </div>
     </div>
   </footer>
+
+  <script>
+    const companions = [
+      { name: "Élise Laurent", age: 44, languages: "FR · EN · LU", interest: "Finance", gender: "Female", available: true },
+      { name: "Henri Muller", age: 58, languages: "EN · FR · DE", interest: "Culture", gender: "Male", available: false },
+      { name: "Mariana Silva", age: 33, languages: "EN · PT · FR", interest: "Expat", gender: "Female", available: true },
+      { name: "Thomas Weber", age: 47, languages: "DE · EN · LU", interest: "Career", gender: "Male", available: true },
+      { name: "Elena Petrova", age: 39, languages: "EN · FR · RU", interest: "Personal Growth", gender: "Female", available: false },
+      { name: "Jean-Claude Becker", age: 51, languages: "FR · DE · LU", interest: "Culture", gender: "Male", available: true }
+    ];
+
+    function renderCompanions(filtered) {
+      const grid = document.getElementById('companionsGrid');
+      grid.innerHTML = '';
+
+      filtered.forEach(c => {
+        const card = document.createElement('div');
+        card.className = "bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-[#C9A66B]/40 transition-all";
+        card.innerHTML = `
+          <div class="h-64 bg-gradient-to-br from-amber-300/20 flex items-center justify-center text-7xl">
+            ${c.gender === 'Female' ? '👩🏻' : '👨🏻'}
+          </div>
+          <div class="p-8">
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="text-2xl serif">${c.name}</h3>
+                <p class="text-[#C9A66B]">${c.age} • ${c.languages}</p>
+              </div>
+              ${c.available ? `<span class="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full">Available Now</span>` : ''}
+            </div>
+            <p class="mt-4 text-white/70">${c.interest} • Thoughtful listener</p>
+            <button onclick="alert('In real version this would start booking with ${c.name}')" 
+                    class="mt-8 w-full bg-white/10 hover:bg-white hover:text-[#0A3D2A] py-4 rounded-2xl transition-all">
+              Start Conversation
+            </button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Filter functionality
+    function filterCompanions() {
+      const lang = document.getElementById('languageFilter').value;
+      const interest = document.getElementById('interestFilter').value;
+      const gender = document.getElementById('genderFilter').value;
+
+      const filtered = companions.filter(c => {
+        const matchLang = lang === 'all' || c.languages.includes(lang);
+        const matchInterest = interest === 'all' || c.interest === interest || 
+                             (interest === 'Expat' && c.interest === 'Expat Life');
+        const matchGender = gender === 'all' || c.gender === gender;
+        return matchLang && matchInterest && matchGender;
+      });
+
+      renderCompanions(filtered);
+    }
+
+    // Event listeners
+    document.getElementById('languageFilter').addEventListener('change', filterCompanions);
+    document.getElementById('interestFilter').addEventListener('change', filterCompanions);
+    document.getElementById('genderFilter').addEventListener('change', filterCompanions);
+
+    // Initial render
+    renderCompanions(companions);
+  </script>
 
 </body>
 </html>
