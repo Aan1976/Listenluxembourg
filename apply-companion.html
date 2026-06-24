@@ -158,10 +158,22 @@
   </footer>
 
   <script>
-    // Simple form submission alert
     document.getElementById('companionForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      alert("✅ Thank you! Your application has been received.\n\nOur team will review it and contact you within 7-14 days.");
+
+      const btn = this.querySelector("button");
+
+      btn.disabled = true;
+      btn.innerHTML = "Submitting...";
+
+      setTimeout(() => {
+        btn.innerHTML = "Submitted ✓";
+
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 1200);
+
+      }, 1500);
     });
   </script>
 
