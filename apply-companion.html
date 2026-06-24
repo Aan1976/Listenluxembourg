@@ -169,6 +169,8 @@
       setTimeout(() => {
         btn.innerHTML = "Submitted ✓";
 
+        localStorage.setItem("application_sent", "true");
+
         setTimeout(() => {
           window.location.href = "application-success.html";
         }, 1200);
